@@ -6,7 +6,7 @@
 version: "3"
 services:
   api:
-    image: $DOCKERHUB_UNAME/chapter-chat-backend:$NEW_VERSION 
+    image: $DOCKERHUB_UNAME/book_club_api-prod:$NEW_VERSION 
     environment:
       - SECRET_KEY=$SECRET_KEY
       - DEBUG=$DEBUG
@@ -17,7 +17,7 @@ services:
     depends_on:
       - db
   nginx:
-    image: $DOCKERHUB_UNAME/chapter-chat-frontend:$NEW_VERSION
+    image: $DOCKERHUB_UNAME/book_club_webserver-prod:$NEW_VERSION
     restart: always
     ports:
       - "80:80"
