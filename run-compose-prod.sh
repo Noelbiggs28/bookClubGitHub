@@ -20,5 +20,3 @@ docker-compose -f docker-compose.prod.yml up -d
 sleep 10 
 docker exec book_club-api-1 python /src/manage.py makemigrations 
 docker exec book_club-api-1 python /src/manage.py migrate
-# docker exec -it book_club-api-1 python manage.py loaddata fixtures.json
-
